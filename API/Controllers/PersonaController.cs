@@ -126,7 +126,7 @@ public class PersonaController : BaseApiController
         return _mapper.Map<List<PersonaDto>>(datos);
     }
     [Authorize(Roles = "Administrador, Empleado")]
-    [HttpGet("GetEmployeeFromBucaramangaOrGiron")]
+    [HttpGet("GetEmployeeFromPidecuestaOrGiron")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<IEnumerable<PersonaDto>>> GetEmployeeFromBucaramangaOrGiron()

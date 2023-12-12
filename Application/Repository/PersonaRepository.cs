@@ -51,7 +51,7 @@ public class PersonaRepository : GenericRepository<Persona>, IPersona
         .Include(e => e.Ciudad)
         .Include(e => e.TipoPersona)
         .Where(e => e.TipoPersona.Descripcion.ToLower() == "empleado"
-        && e.Ciudad.NombreCiu.ToLower() == "bucaramanga" || e.Ciudad.NombreCiu.ToLower() == "giron")
+        && e.Ciudad.NombreCiu.ToLower() == "pidecuesta" || e.Ciudad.NombreCiu.ToLower() == "giron")
         .ToListAsync();
     }
     public async Task<IEnumerable<Persona>> GetClients5YearOlder(){
